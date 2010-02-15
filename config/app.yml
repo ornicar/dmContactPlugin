@@ -1,0 +1,6 @@
+all:
+  recaptcha:
+    # get your recaptcha keys on http://recaptcha.net/api/getkey
+    public_key:
+    private_key:
+    enabled:      false
