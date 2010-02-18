@@ -21,7 +21,7 @@ class BasedmContactActions extends myFrontModuleActions
         )));
       }
 
-      $form->bind($data);
+      $form->bind($data, $request->getFiles());
 
       if ($form->isValid())
       {
