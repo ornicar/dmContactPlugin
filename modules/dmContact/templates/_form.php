@@ -16,7 +16,7 @@ echo $form['name']->label()->field()->error();
 // same with email
 echo $form['email']->label()->field()->help()->error();
 
-echo $form['body']->label('Your message')->field()->error();
+echo $form['body']->field()->error();
 
 // render captcha if enabled
 if($form->isCaptchaEnabled())
@@ -27,7 +27,7 @@ if($form->isCaptchaEnabled())
 echo $form->renderHiddenFields();
 
 // change the submit button text
-echo _tag('div.submit_wrap', $form->submit('Send'));
+echo _tag('div.submit_wrap', $form->submit(__('Send')));
 
 // close the form tag
 echo $form->close();  

@@ -34,6 +34,8 @@ abstract class PluginDmContactForm extends BaseDmContactForm
 
     $this->widgetSchema->setHelp('email', 'Your email will never be published');
 
+    $this->widgetSchema['body']->setLabel('Your message');
+
     if ($this->isCaptchaEnabled())
     {
       $this->addCaptcha();
