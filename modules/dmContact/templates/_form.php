@@ -16,7 +16,7 @@ echo $form['name']->label()->field()->error();
 // same with email
 echo $form['email']->label()->field()->help()->error();
 
-echo $form['body']->field()->error();
+echo $form['body']->label()->field()->error();
 
 // render captcha if enabled
 if($form->isCaptchaEnabled())
