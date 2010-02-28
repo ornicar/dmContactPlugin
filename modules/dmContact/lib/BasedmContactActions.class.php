@@ -29,9 +29,9 @@ class BasedmContactActions extends myFrontModuleActions
 
         $this->getUser()->setFlash('contact_form_valid', true);
 
-        $this->getService('dispatcher')->notify(new sfEvent($this, 'dm_contact.saved'), array(
+        $this->getService('dispatcher')->notify(new sfEvent($this, 'dm_contact.saved', array(
           'contact' => $form->getObject()
-        ));
+        )));
 
         $this->redirectBack();
       }
