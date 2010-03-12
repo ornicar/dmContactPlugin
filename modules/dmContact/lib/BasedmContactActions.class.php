@@ -7,7 +7,7 @@ class BasedmContactActions extends myFrontModuleActions
 
   public function executeFormWidget(dmWebRequest $request)
   {
-    $form = $this->forms['DmContact'];
+    $form = new DmContactForm();
 
     if ($request->hasParameter($form->getName()))
     {
@@ -36,6 +36,8 @@ class BasedmContactActions extends myFrontModuleActions
         $this->redirectBack();
       }
     }
+
+    $this->forms['DmContact'] = $form;
   }
 
 }
