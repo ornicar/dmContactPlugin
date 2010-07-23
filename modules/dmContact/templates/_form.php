@@ -8,7 +8,7 @@ if($sf_user->hasFlash('contact_form_valid'))
 }
 
 // open the form tag with a dm_contact_form css class
-echo $form->open();
+echo $form->open('action=+/dmContact/submit');
 
 // write name label, field and error message
 echo $form['name']->label()->field()->error();
@@ -25,6 +25,8 @@ if($form->isCaptchaEnabled())
 }
 
 echo $form->renderHiddenFields();
+
+echo _tag('input name="dm_page_slug" type=hidden value='.$dm_page->slug);
 
 // change the submit button text
 echo _tag('div.submit_wrap', $form->submit(__('Send')));

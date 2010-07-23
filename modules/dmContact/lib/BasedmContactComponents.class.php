@@ -7,7 +7,9 @@ class BasedmContactComponents extends myFrontModuleComponents
 
   public function executeForm()
   {
-    $this->form = $this->forms['DmContact'];
+      if(!$this->form = $this->getRequest()->getAttribute('dm_contact_form')) {
+        $this->form = new DmContactForm();
+      }
   }
   
 }
